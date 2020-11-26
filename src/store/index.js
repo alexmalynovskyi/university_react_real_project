@@ -1,11 +1,13 @@
-import { creatStore } from 'redux';
-import reducers from './reducers';
+import { createStore } from 'redux';
+import reducers from './reducers/redurecs';
 
 const initialState = {
+
 };
 
-export default creatStore(
+export default createStore(
   reducers,
-  initialState
-)
+  initialState,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
